@@ -1,0 +1,98 @@
+
+.loader {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 48px;
+  height: 48px;
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  color: #fff;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  color: #dc3401;
+  animation-delay: 0.4s;
+  transform: rotateY(70deg);
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+
+img {
+  display: block;
+  max-width: 800px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.cat-info {
+  display: flex;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: rgba(38, 38, 38, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(35, 35, 35, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.block-info {
+  padding: 18px;
+}
+body {
+  font-size: larger;
+  background-color: rgb(198, 193, 193);
+}
